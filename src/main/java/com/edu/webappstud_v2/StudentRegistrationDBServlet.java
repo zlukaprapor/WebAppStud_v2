@@ -110,8 +110,6 @@ public class StudentRegistrationDBServlet extends HttpServlet {
         }
     }
 
-
-
     // Отримати дані студентів з бази даних та зберегти їх у списку
     private List<Student> getStudentsFromDatabase(Connection connection) throws SQLException {
         List<Student> students = new ArrayList<>();
