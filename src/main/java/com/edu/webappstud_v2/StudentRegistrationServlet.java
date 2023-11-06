@@ -11,6 +11,7 @@ import java.util.List;
 
 @WebServlet(name = "StudentRegistrationServlet", value = "/student-registration")
 public class StudentRegistrationServlet extends HttpServlet {
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         response.setContentType("text/html");
 

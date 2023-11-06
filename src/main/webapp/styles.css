@@ -84,6 +84,3 @@ input[type=submit]:hover {
     background-color: #ddd;
 }
 
-.error p {
-    color: red;
-}

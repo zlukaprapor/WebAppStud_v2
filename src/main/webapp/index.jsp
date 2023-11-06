@@ -11,7 +11,8 @@
 <body>
 <div id="page">
     <h1>Student Form</h1>
-    <form method="post" action="${pageContext.request.contextPath}/student-registration">
+    <form method="post" action="${pageContext.request.contextPath}/student-registration-db
+">
         <table>
             <tbody>
             <tr>
@@ -60,6 +61,27 @@
                 <td>${student.email}</td>
                 <td>${student.group}</td>
                 <td>${student.faculty}</td>
+                <td>
+                    <form style=";color: #fff;
+    border: none;
+    margin: 1px 1px 1px 1px;
+    padding: 5px 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;" action="${pageContext.request.contextPath}/delete-student" method="post">
+                        <input type="hidden" name="name" value="${student.name}">
+                        <input type="hidden" name="surname" value="${student.surname}">
+                        <button style="background-color: red;
+
+    border: none;
+    width: 20px;
+    height: 20px;
+    padding: 5px 5px;
+    cursor: pointer;
+    border-radius: 5px;color: #000000"  type="submit">X</button>
+                    </form>
+                </td>
+
             </tr>
         </c:forEach>
     </table>
