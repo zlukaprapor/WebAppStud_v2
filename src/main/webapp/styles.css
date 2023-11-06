@@ -40,25 +40,50 @@ input[type=submit]:hover {
 }
 
 
-table.list {
-    width: 100%;
-    border-collapse: collapse;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-table.list th, table.list td {
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.list {
+    font-family: Arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.list th, .list td {
     border: 1px solid #dddddd;
     text-align: left;
     padding: 8px;
 }
 
-table.list th {
+.list th {
     background-color: #f2f2f2;
 }
 
-table.list tr:nth-child(even) {
+.list tr:nth-child(even) {
     background-color: #f2f2f2;
 }
 
-table.list tr:hover {
+.list tr:hover {
     background-color: #ddd;
+}
+
+.error p {
+    color: red;
 }

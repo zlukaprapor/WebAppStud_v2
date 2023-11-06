@@ -7,6 +7,8 @@ import jakarta.servlet.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
+
+
 @WebServlet(name = "StudentRegistrationServlet", value = "/student-registration")
 public class StudentRegistrationServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -15,6 +17,8 @@ public class StudentRegistrationServlet extends HttpServlet {
         String name = request.getParameter("name");
         String surname = request.getParameter("surname");
         String email = request.getParameter("email");
+        String group = request.getParameter("group");
+        String faculty = request.getParameter("faculty");
 
         if (name != null && !name.trim().isEmpty() && surname != null && !surname.trim().isEmpty()) {
             List<Student> students = (List<Student>) getServletContext().getAttribute("students");
@@ -37,6 +41,8 @@ public class StudentRegistrationServlet extends HttpServlet {
                 student.setName(name);
                 student.setSurname(surname);
                 student.setEmail(email);
+                student.setGroup(group);
+                student.setFaculty(faculty);
                 students.add(student);
             } else {
                 request.setAttribute("error", "Дублікат імені та прізвища.");
@@ -45,6 +51,6 @@ public class StudentRegistrationServlet extends HttpServlet {
             request.setAttribute("error", "Некоректне ім'я або прізвище.");
         }
 
-        request.getRequestDispatcher("/students.jsp").forward(request, response);
+        request.getRequestDispatcher("/index.jsp").forward(request, response);
     }
 }

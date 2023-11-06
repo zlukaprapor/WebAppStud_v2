@@ -12,7 +12,8 @@ import jakarta.servlet.annotation.*;
 public class RegistrationFormServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
-        request.getRequestDispatcher("/registration.jsp").forward(request, response);
+        request.getRequestDispatcher("/index.jsp").forward(request, response);
     }
+
 
 }

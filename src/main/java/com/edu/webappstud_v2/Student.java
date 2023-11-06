@@ -6,6 +6,8 @@ public class Student {
     private String name;
     private String surname;
     private String email;
+    private String group;
+    private String faculty;
 
     private String error;
 
@@ -46,6 +48,21 @@ public class Student {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+    public String getGroup() {
+        return group;
+    }
+
+    public void setGroup(String group) {
+        this.group = group;
+    }
+
+    public String getFaculty() {
+        return faculty;
+    }
+
+    public void setFaculty(String faculty) {
+        this.faculty = faculty;
     }
 
     public String getError() {
